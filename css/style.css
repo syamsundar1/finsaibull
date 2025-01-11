@@ -232,7 +232,7 @@ h2 span.sm-text {
 }
 
 .colored-text {
-  color: #B3841A;
+  color: #108ACB;
 }
 
 @media (max-width: 992px) {
@@ -410,7 +410,7 @@ header nav .menu-icon {
   font-size: 1.5em;
   display: none;
   cursor: pointer;
-  color: #b3841a;
+  color: #108ACB;
 }
 header nav .menu ul {
   display: flex;
@@ -423,7 +423,7 @@ header nav .menu ul a {
   font-family: "venite";
 }
 header nav .menu ul a:hover {
-  color: #B3841A;
+  color: #108ACB;
 }
 header nav .menu .close-icon {
   display: none;
@@ -432,7 +432,7 @@ header nav .menu .close-icon {
   position: absolute;
   top: 2rem;
   right: 2rem;
-  color: #b3841a;
+  color: #108ACB;
 }
 @media (max-width: 768px) {
   header nav {
@@ -817,8 +817,8 @@ header nav .menu .close-icon {
   width: 100%;
 }
 .text-with-image .highlight-text, .earn-section .highlight-text {
-  color: #b3841a;
-  border-bottom: 1px dashed #b3841a;
+  color: #108ACB;
+  border-bottom: 1px dashed #108ACB;
 }
 .text-with-image .primary-btn, .earn-section .primary-btn, .text-with-image .secondary-btn, .earn-section .secondary-btn {
   transition: 0.05s;
@@ -954,7 +954,7 @@ header nav .menu .close-icon {
   }
 }
 .footer ul a:hover {
-  color: #B3841A;
+  color: #108ACB;
 }
 .footer .content {
   font-size: 18px;
@@ -969,7 +969,7 @@ header nav .menu .close-icon {
   transition: 0.5s;
 }
 .footer .icons:hover {
-  color: #b3841a;
+  color: #108ACB;
   transform: translateY(-4px);
 }
 .footer .icons-gap {
@@ -1050,10 +1050,10 @@ header nav .menu .close-icon {
   position: absolute;
   width: 7px; /* Increased width to create a smooth glow */
   height: 7px; /* Adjusted for better continuity */
-  background: rgba(213, 160, 28, 0.8); /* Glowing color */
+  background: #108ACB; /* Glowing color */
   border-radius: 50%;
   pointer-events: none;
-  box-shadow: 0 0 10px #d5a01c, 0 0 20px #d5a01c;
+  box-shadow: 0 0 10px #108ACB, 0 0 20px #108ACB;
   animation: trailMovement 0.6s ease-out forwards;
 }
 
