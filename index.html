@@ -34,9 +34,41 @@
         </nav>
       </div>
     </header>
+
+  <!-- Countdown Banner -->
+  <div class="countdown-banner">
+    <div class="banner-content">
+      <h1>Bull-ieve it or not, we're coming soon!</h1>
+      <div class="countdown">
+        <div class="time">
+          <span id="days">00</span>
+          <p>Days</p>
+        </div>
+        <div class="time">
+          <span id="hours">00</span>
+          <p>Hours</p>
+        </div>
+        <div class="time">
+          <span id="minutes">00</span>
+          <p>Minutes</p>
+        </div>
+        <div class="time">
+          <span id="seconds">00</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <section class="hero-section">
+
+     
       <div class="header-container">
         <div class="hero-content">
+
+
+          
+
           <div class="hero-title px-12">
             <div id="animation-container">
               <h1 class="animated-heading">Tap, Earn & Rule the Bull Kingdom!</h1>
@@ -296,12 +328,8 @@
       <h2>Contact Us</h2>
       <form class="contact-form" action="#" method="POST">
         <div class="form-group">
-          <label for="first-name">First Name</label>
-          <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
-        </div>
-        <div class="form-group">
-          <label for="last-name">Last Name</label>
-          <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+          <label for="first-name">Full Name</label>
+          <input type="text" id="first-name" name="first-name" placeholder="Enter your full name" required>
         </div>
         <div class="form-group">
           <label for="user-id">User ID</label>
@@ -313,7 +341,7 @@
         </div>
         <div class="form-group">
           <label for="message">Subject/Message</label>
-          <textarea id="message" name="message" placeholder="Enter your message (400-500 words limit)" maxlength="500" required></textarea>
+          <textarea id="message" name="message" placeholder="Enter your Message" maxlength="500" required></textarea>
         </div>
         <button type="submit" class="submit-btn">Submit</button>
       </form>
@@ -1621,6 +1649,37 @@
           const headings = document.querySelectorAll('.animated-heading');
           headings.forEach(animateHeading);
       });
+
+
+
+// Set the target date and time
+const targetDate = new Date("January 16, 2025 06:00:00 UTC").getTime();
+
+// Update the countdown every second
+const countdown = setInterval(() => {
+  const now = new Date().getTime();
+  const timeLeft = targetDate - now;
+
+  // Calculate time components
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  // Update the HTML elements
+  document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+  document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+  document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+  document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+
+  // Stop the countdown when time is up
+  if (timeLeft < 0) {
+    clearInterval(countdown);
+    document.querySelector(".countdown").innerHTML = "<p>We're live now!</p>";
+  }
+}, 1000);
+
+
     </script>
 
     <!-- cursor js -->
